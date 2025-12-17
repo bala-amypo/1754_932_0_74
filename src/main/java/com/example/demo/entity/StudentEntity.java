@@ -3,13 +3,14 @@ package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.id;
+import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="student")
 public class StudentEntity{
     @Id
-    @GeneratedValue(statergy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     @Coloumn(name="name")
     private String name;
@@ -31,25 +32,25 @@ public class StudentEntity{
     public void setName(String name){
         this.name=name;
     }
-    public String getName(String name){
+    public String getName(){
         return this.name;
     }
     public void setEmail(String email){
         this.email=email;
     }
-    public String getEmail(String Email){
+    public String getEmail(){
         return this.email;
     }
     public void setPassword(String password){
         this.password=password;
     }
-    public String getPassword(String password){
+    public String getPassword(){
         return this.password;
     }
     public void setRole(String role){
         this.role=role;
     }
-    public String getRole(String role){
+    public String getRole(){
         return this.role;
     }
 
