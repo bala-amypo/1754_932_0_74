@@ -12,7 +12,7 @@ public class StudentEntity{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    @Coloumn(name="name")
+    @Column(name="name")
     private String name;
     private String email;
     private String password;
