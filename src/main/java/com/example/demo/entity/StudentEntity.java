@@ -17,6 +17,17 @@ public class StudentEntity{
     private String password;
     private String role;
 
+    public StudentEntity(long id,String name,String email,String password,String role){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.password=password;
+        this.role=role;
+    }
+    public StudentEntity(){
+        
+    }
+
     public void setName(String name){
         this.name=name;
     }
@@ -32,9 +43,14 @@ public class StudentEntity{
     public void setPassword(String password){
         this.password=password;
     }
-    public String getPassword(String password)
+    public String getPassword(String password){
+        return this.password;
+    }
     public void setRole(String role){
         this.role=role;
+    }
+    public String getRole(String role){
+        return this.role;
     }
 
 
