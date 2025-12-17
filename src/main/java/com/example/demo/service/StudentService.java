@@ -6,6 +6,6 @@ import java.util.*;
 public interface StudentService {
 
     public StudentEntity addStudents(StudentEntity student);
-    public List<StudentEntity> getStudent();
+    public List<StudentEntity> getStudents();
 
 }
