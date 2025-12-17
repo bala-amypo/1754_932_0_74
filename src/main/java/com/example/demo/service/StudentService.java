@@ -7,5 +7,6 @@ public interface StudentService {
 
     public StudentEntity addStudents(StudentEntity student);
     public List<StudentEntity> getStudents();
+    public StudentEntity getStudentById(long id);
 
 }
