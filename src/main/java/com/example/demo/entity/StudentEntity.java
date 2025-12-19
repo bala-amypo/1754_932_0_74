@@ -13,8 +13,12 @@ public class StudentEntity{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     @Column(name="name")
+    @NotBlank(message="please enter your name")
     private String name;
+    @NotBlank(message="enter you email")
+    @Email
     private String email;
+    @Size(min=8,max=20)
     private String password;
     private String role;
 
