@@ -1,8 +1,18 @@
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+@RestControllerAdvice
+public class GlobalExceptionHandler {
 
-public class GlobalExceptionHandler{
-    @Exceptionhandler(ResourceNotFoundException.java)
-    public ResponseEntity<String>GlobalExceptionHandler (ResourceNotFoundException ex){
-        return ResponseEntity.status(404).body(ex.)
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> handleResourceNotFoundException(
+            ResourceNotFoundException ex) {
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(ex.getMessage());
     }
 }
+        
